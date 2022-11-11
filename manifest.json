@@ -16,5 +16,13 @@
     "16": "js_icon_16.png",
     "32": "js_icon_32.png",
     "64": "js_icon_64.png"
-  }
+  },
+    "commands": {
+      "_execute_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+F",
+          "mac": "MacCtrl+Shift+F"
+        }
+      }
+    }
 }
