@@ -9,7 +9,8 @@
     }
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": "js_icon_16.png"
   },
   "icons": {
     "16": "js_icon_16.png",
