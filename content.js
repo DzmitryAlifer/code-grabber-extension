@@ -16,6 +16,7 @@ chrome.runtime.onMessage.addListener((message, sender, response) => {
       .replaceAll('console.log', 'console.info')
       .replaceAll(/\d+\n/g, '\n')
       .replaceAll(/\n\d+\n/g, '\n')
+      .replaceAll('\n\n', '\n');
     response({code});
   }
 });

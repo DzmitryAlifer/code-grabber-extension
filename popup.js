@@ -1,9 +1,9 @@
-const setCode = info => {
+const setCode = data => {
     const codeTextArea = document.getElementById('code');
-    codeTextArea.textContent = info.code;
+    codeTextArea.textContent = data?.code;
     codeTextArea.select();
     document.execCommand('copy');
-    navigator.clipboard.writeText(info.code);
+    navigator.clipboard.writeText(data?.code);
 };
 
 window.addEventListener('DOMContentLoaded', () => {
