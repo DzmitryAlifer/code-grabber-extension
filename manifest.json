@@ -9,21 +9,25 @@
       "js": ["content.js"]
     }
   ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["tabs", "activeTab", "webNavigation"],
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "js_icon_16.png"
+    "default_icon": "icons/js_icon_grey_16.png"
   },
   "icons": {
-    "16": "js_icon_16.png",
-    "32": "js_icon_32.png",
-    "64": "js_icon_64.png"
+    "16": "icons/js_icon_grey_16.png",
+    "32": "icons/js_icon_grey_32.png",
+    "64": "icons/js_icon_grey_64.png"
   },
-    "commands": {
-      "_execute_action": {
-        "suggested_key": {
-          "default": "Ctrl+Shift+F",
-          "mac": "MacCtrl+Shift+F"
-        }
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
       }
     }
+  }
 }
