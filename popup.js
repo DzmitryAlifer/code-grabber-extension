@@ -7,10 +7,11 @@ window.addEventListener('DOMContentLoaded', () => {
             }
             
             const codeTextArea = document.getElementById('code');
-            codeTextArea.textContent = data?.code;
+            codeTextArea.textContent = data?.code.trim();
             codeTextArea.select();
             document.execCommand('copy');
-            navigator.clipboard.writeText(data?.code);
+            navigator.clipboard.writeText(codeTextArea.textContent);
+            window.close();
         });
     });
 });
