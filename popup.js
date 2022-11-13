@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
         chrome.tabs.sendMessage(tabs[0].id, {from: 'popup', subject: 'codeSnippet'}, data => {
             if (!data?.code) {
                 window.close();
+                return;
             }
             
             const codeTextArea = document.getElementById('code');

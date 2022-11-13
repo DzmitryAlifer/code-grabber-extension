@@ -13,10 +13,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
     if (hasConsoleCode && message.from === 'popup' && message.subject === 'codeSnippet') {
         const code = codeNode.singleNodeValue
-            .parentNode
-            .parentNode
-            .parentNode
-            .parentNode
+            .parentNode.parentNode.parentNode.parentNode
+            .parentNode.parentNode.parentNode.parentNode
             .innerText
             .replaceAll('​', '')
             .replaceAll('console.log', 'console.info')
