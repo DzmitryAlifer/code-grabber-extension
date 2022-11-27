@@ -12,7 +12,7 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["tabs", "activeTab", "webNavigation"],
+  "permissions": ["tabs"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icons/js_icon_grey_16.png"
