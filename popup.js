@@ -1,6 +1,9 @@
 window.addEventListener('DOMContentLoaded', () => {
     chrome.tabs.query({active: true, currentWindow: true}, tabs => {
-        chrome.tabs.sendMessage(tabs[0].id, {from: 'popup', subject: 'codeSnippet'}, data => {
+        const currentTab = tabs[0];
+        const message = {from: 'popup', subject: 'codeSnippet', url: currentTab.url};
+
+        chrome.tabs.sendMessage(currentTab.id, message, data => {
             if (!data?.code) {
                 window.close();
                 return;
